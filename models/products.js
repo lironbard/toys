@@ -6,7 +6,7 @@ let prodsSchema = new mongoose.Schema({
     category: String,
     img_url: String,
     price: Number,
-    date: { type:date, default: new Date() }
+    date: { type:Date, default: new Date() }
 })
 
 let product = mongoose.model("products", prodsSchema);
