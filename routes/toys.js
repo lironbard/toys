@@ -2,6 +2,9 @@ const express = require('express');
 const Product = require('../models/products');
 const router = express.Router();
 
+router.get('/all', (req, res) => {
+    Product.find().then(data => res.json(data))
+})
 
 router.get('/', (req, res, next) => {
     let { page = 1, search = '' } = req.query;
